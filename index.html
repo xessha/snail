@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="370" height="420">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+// ... Здесь будем рисовать
+
+
+//рисуем линии
+ctx.moveTo(300, 40); 
+var controlX1 = 300; 
+var controlY1 = 40;  
+var controlX2 = 250; 
+var controlY2 = 131;
+    var endX = 250;
+	var endY = 131;
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+	 
+ctx.moveTo(250, 131); 
+var controlX1 = 250; 
+var controlY1 = 131; 
+var controlX2 = 90; 
+var controlY2 = 131;
+	var endX = 90; 
+    var endY = 131; 
+	   
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+
+ctx.moveTo(92, 131); 
+var controlX1 = 92; 
+var controlY1 = 145; 
+var controlX2 = 95; 
+var controlY2 = 145;
+	var endX = 95; 
+    var endY = 145; 
+	   
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+
+ctx.moveTo(95, 145); 
+var controlX1 = 95; 
+var controlY1 = 145; 
+var controlX2 = 255; 
+var controlY2 = 145;
+	var endX = 255; 
+    var endY = 145; 
+	   
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+
+ctx.moveTo(255, 145); 
+var controlX1 = 255; 
+var controlY1 = 145; 
+var controlX2 = 310; 
+var controlY2 = 50;
+	var endX = 310; 
+    var endY = 50; 
+	   
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+
+//рисуем рожки
+ctx.moveTo(255, 10); 
+var controlX1 = 255; 
+var controlY1 = 10;  
+var controlX2 = 265; 
+var controlY2 = 25;
+    var endX = 265;
+	var endY = 25;
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+
+ctx.moveTo(310, 26); 
+var controlX1 = 310; 
+var controlY1 = 26;  
+var controlX2 = 320; 
+var controlY2 = 10;
+    var endX = 320;
+	var endY = 10;
+ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY); 
+
+ctx.lineWidth = 5; 
+ctx.strokeStyle = "#ba8165"; // line color 
+ctx.stroke();
+
+//рисуем овал
+ctx.beginPath();
+ctx.scale(2, 1); // растягиваем по горизонтали в 2 раза
+ctx.strokeStyle = '#ba8165'; 
+ctx.lineWidth = 5;
+ctx.arc(75, 75, 50, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#c99d87';
+ctx.fill(); 
+ctx.stroke();
+
+//рисуем круг
+ctx.translate(75, 10);
+ctx.beginPath();
+ctx.strokeStyle = '#ba8165'; 
+ctx.lineWidth = 5;
+ctx.arc(75, 72, 40, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = '#c99d87';
+ctx.fill();
+ctx.stroke();
+ctx.resetTransform();
+
+//рисуем голову
+ctx.translate(75, 10);
+ctx.beginPath();
+ctx.strokeStyle = '#ba8165'; 
+ctx.lineWidth = 5;
+ctx.arc(212, 45, 35, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = '#c99d87';
+ctx.fill();
+ctx.stroke();
+ctx.resetTransform();
+ctx.translate(170, 60);
+
+//рисуем улыбку
+ctx.strokeStyle = "#000000";
+ctx.lineWidth = 3;
+ctx.beginPath();
+ctx.moveTo(100, 0);
+ctx.quadraticCurveTo(110, 20, 130, 0);
+ctx.moveTo(100, 0);
+ctx.quadraticCurveTo(110, 40, 130, 0);
+ctx.stroke();
+ctx.resetTransform();
+
+//рисуем глаз1
+ctx.translate(50, 4);
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 3;
+ctx.arc(222, 40, 6, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+ctx.resetTransform();
+ctx.translate(130, 60);
+
+//рисуем глаз2
+ctx.translate(70, 4);
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 3;
+ctx.arc(102, -19, 6, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+ctx.resetTransform();
+ctx.translate(130, 60);
+
+
+</script>
